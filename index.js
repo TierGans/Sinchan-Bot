@@ -70,7 +70,7 @@ const start = (aruga = new Client()) => {
 	const groups = await aruga.getAllGroups()
 	// kodisi ketika batas group bot telah tercapat, ubah di file settings/setting.json
 	if (groups.length > groupLimit) {
-	await aruga.sendText(chat.id, `Sorry, the group on this bot is full\nMax Group is: ${groupLimit}`).then(() => {
+	await aruga.sendText(chat.id, `Sorry, the group on this bot is full(Hubungi owner&Donate)\nMax Group is: ${groupLimit}`).then(() => {
 	      aruga.leaveGroup(chat.id)
 	      aruga.deleteChat(chat.id)
 	  }) 
@@ -83,7 +83,7 @@ const start = (aruga = new Client()) => {
 	    })
 	    } else {
         await aruga.simulateTyping(chat.id, true).then(async () => {
-          await aruga.sendText(chat.id, `Hai minna~, Im Aruga BOT. To find out the commands on this bot type ${prefix}menu`)
+          await aruga.sendText(chat.id, `Hai minna~, Im Sinchan BOT. To find out the commands on this bot type ${prefix}menu`)
         })
 	    }
 	}
